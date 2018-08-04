@@ -15,7 +15,8 @@ source:
   sha256: 8b88ecc25903c83539dfc73cdc31a160e2aa4a7bea1773b22c79133d2f006035
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
 
   rpaths:
@@ -24,14 +25,15 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-modeltools >=0.2_9
     - r-multcomp
     - r-mvtnorm >=1.0_5
     - r-survival
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -39,7 +41,6 @@ requirements:
     - r-multcomp
     - r-mvtnorm >=1.0_5
     - r-survival
-    - libgcc  # [not win]
 
 test:
   commands:
