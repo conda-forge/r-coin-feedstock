@@ -1,4 +1,4 @@
-{% set version = '1.3-0' %}
+{% set version = '1.3-1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coin/coin_{{ version }}.tar.gz
-  sha256: adcebb37e0a7dfddbf8ec1e09c12a809bd76d90b5b8ff2b1048a75252ba11ef8
+  sha256: 5de2519a6e2b059bba9d74c58085cccaff1aaaa0454586ed164a108ebd1b2062
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -58,15 +58,16 @@ about:
     K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate
     problems.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
 
 # Package: coin
-# Version: 1.3-0
-# Date: 2019-03-04
+# Version: 1.3-1
+# Date: 2019-08-22
 # Title: Conditional Inference Procedures in a Permutation Test Framework
 # Authors@R: c(person("Torsten", "Hothorn", role = c("aut", "cre"), email = "Torsten.Hothorn@R-project.org", comment = c(ORCID = "0000-0001-8301-0471")), person("Henric", "Winell", role = "aut", comment = c(ORCID = "0000-0001-7995-3047")), person("Kurt", "Hornik", role = "aut", comment = c(ORCID = "0000-0003-4198-9911")), person(c("Mark", "A."), "van de Wiel", role = "aut", comment = c(ORCID = "0000-0003-4780-8472")), person("Achim", "Zeileis", role = "aut", comment = c(ORCID = "0000-0003-0918-3766")))
 # Description: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems.
@@ -79,8 +80,8 @@ extra:
 # ByteCompile: yes
 # License: GPL-2
 # URL: http://coin.r-forge.r-project.org
-# Packaged: 2019-03-05 07:45:21 UTC; hothorn
+# Packaged: 2019-08-27 09:16:05 UTC; hothorn
 # Author: Torsten Hothorn [aut, cre] (<https://orcid.org/0000-0001-8301-0471>), Henric Winell [aut] (<https://orcid.org/0000-0001-7995-3047>), Kurt Hornik [aut] (<https://orcid.org/0000-0003-4198-9911>), Mark A. van de Wiel [aut] (<https://orcid.org/0000-0003-4780-8472>), Achim Zeileis [aut] (<https://orcid.org/0000-0003-0918-3766>)
 # Maintainer: Torsten Hothorn <Torsten.Hothorn@R-project.org>
 # Repository: CRAN
-# Date/Publication: 2019-03-08 10:12:52 UTC
+# Date/Publication: 2019-08-28 11:50:06 UTC
