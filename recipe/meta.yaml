@@ -29,6 +29,7 @@ requirements:
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
   host:
+    - libblas
     - r-base
     - r-libcoin >=1.0_0
     - r-matrixstats >=0.54.0
