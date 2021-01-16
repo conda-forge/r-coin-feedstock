@@ -3,7 +3,7 @@ About r-coin
 
 Home: http://coin.r-forge.r-project.org
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-coin-feedstock/blob/master/LICENSE.txt)
 
