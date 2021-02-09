@@ -1,4 +1,4 @@
-{% set version = "1.4-0" %}
+{% set version = "1.4-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coin/coin_{{ version }}.tar.gz
-  sha256: fb9bfb1be33947ac3784829c6c2f7623b29bca04e540c0bce917f13f2a694ad8
+  sha256: 11870eca0489e2ea5f45926a082213981f17945ee43b692c538a8ce79785bb97
 
 build:
   merge_build_host: true  # [win]
