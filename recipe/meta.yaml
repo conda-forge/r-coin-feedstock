@@ -12,10 +12,14 @@ source:
   sha256: 8a6302dbf3ef570cd9f69ce7b6cd3d3b928dc776f840bbd767af132e0080b974
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -30,6 +34,7 @@ requirements:
     - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ stdlib("m2w64_c") }}          # [win]
+    - {{ compiler('fortran') }}        # [osx and arm64]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -37,7 +42,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-libcoin >=1.0_5
+    - r-libcoin >=1.0_9
     - r-matrixstats >=0.54.0
     - r-modeltools >=0.2_9
     - r-multcomp
@@ -45,7 +50,7 @@ requirements:
     - r-survival
   run:
     - r-base
-    - r-libcoin >=1.0_5
+    - r-libcoin >=1.0_9
     - r-matrixstats >=0.54.0
     - r-modeltools >=0.2_9
     - r-multcomp
