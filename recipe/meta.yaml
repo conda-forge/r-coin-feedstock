@@ -3,7 +3,7 @@
 
 package:
   name: r-coin
-  version: {{ version|replace('-', '_') }}
+  version: "{{ version|replace('-', '_') }}"
 
 source:
   url:
@@ -63,9 +63,11 @@ test:
     - "\"%R%\" -e \"library('coin')\""  # [win]
 
 about:
-  home: http://coin.r-forge.r-project.org
+  home: https://codeberg.org/thothorn/coin/
   license: GPL-2.0-only
-  summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems.
+  summary: Conditional inference procedures for the general independence problem including two-sample,
+    K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate
+    problems described in <doi:10.18637/jss.v028.i08>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
