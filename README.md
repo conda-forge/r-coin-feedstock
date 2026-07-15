@@ -7,20 +7,20 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-coin-feedstoc
 About r-coin
 ------------
 
-Home: http://coin.r-forge.r-project.org
+Home: https://codeberg.org/thothorn/coin/
 
 Package license: GPL-2.0-only
 
-Summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems.
+Summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems described in <doi:10.18637/jss.v028.i08>.
 
 About r-coin
 ------------
 
-Home: http://coin.r-forge.r-project.org
+Home: https://codeberg.org/thothorn/coin/
 
 Package license: GPL-2.0-only
 
-Summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems.
+Summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems described in <doi:10.18637/jss.v028.i08>.
 
 Current build status
 ====================
