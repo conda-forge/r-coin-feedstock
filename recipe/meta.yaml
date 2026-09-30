@@ -1,15 +1,15 @@
-{% set version = "1.4-5" %}
+{% set version = "1.4-6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-coin
-  version: "{{ version|replace('-', '_') }}"
+  version: {{ version|replace('-', '_') }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/coin_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coin/coin_{{ version }}.tar.gz
-  sha256: 4d833b631c8bbea7c3cfb5761a096c93ddf8ab8b4f020939565ad20b167ecb64
+  sha256: 3873774a641ed07906ba51ea00c8aec8b7cb0abbadf19b9275a45c4a0a6ac10e
 
 build:
   number: 0
@@ -65,9 +65,7 @@ test:
 about:
   home: https://codeberg.org/thothorn/coin/
   license: GPL-2.0-only
-  summary: Conditional inference procedures for the general independence problem including two-sample,
-    K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate
-    problems described in <doi:10.18637/jss.v028.i08>.
+  summary: Conditional inference procedures for the general independence problem including two-sample, K-sample (non-parametric ANOVA), correlation, censored, ordered and multivariate problems described in <doi:10.18637/jss.v028.i08>.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
